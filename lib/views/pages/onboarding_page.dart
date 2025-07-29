@@ -20,7 +20,7 @@ class OnboardingPage extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 HeroWidget(
-                  title: '',
+                  title: "Welcome to My App",
                 ),
                 SizedBox(
                   height: 20,
