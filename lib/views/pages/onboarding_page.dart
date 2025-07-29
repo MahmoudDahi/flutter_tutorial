@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_tutorial/data/constants.dart';
-import 'package:flutter_tutorial/views/widget_tree.dart';
+import 'package:flutter_tutorial/views/pages/login_page.dart';
 import 'package:flutter_tutorial/views/widgets/hero_widget.dart';
 
 class OnboardingPage extends StatelessWidget {
@@ -35,7 +35,7 @@ class OnboardingPage extends StatelessWidget {
                     Navigator.pushAndRemoveUntil(
                       context,
                       MaterialPageRoute(
-                        builder: (context) => WidgetTree(),
+                        builder: (context) => LoginPage(title: 'Registration'),
                       ),
                       (route) => false,
                     );
