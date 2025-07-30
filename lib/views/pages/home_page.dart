@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_tutorial/views/pages/course_page.dart';
+import 'package:flutter_tutorial/views/pages/activity_page.dart';
 import 'package:flutter_tutorial/views/widgets/container_widget.dart';
 import 'package:flutter_tutorial/views/widgets/hero_widget.dart';
 
@@ -31,7 +31,7 @@ class HomePage extends StatelessWidget {
             ),
             HeroWidget(
               title: 'Flutter App',
-              nextPage: CoursePage(),
+              nextPage: ActivityPage(),
             ),
             SizedBox(
               height: 10,
