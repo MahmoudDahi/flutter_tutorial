@@ -32,12 +32,11 @@ class OnboardingPage extends StatelessWidget {
                 ),
                 FilledButton(
                   onPressed: () {
-                    Navigator.pushAndRemoveUntil(
+                    Navigator.push(
                       context,
                       MaterialPageRoute(
                         builder: (context) => LoginPage(title: 'Registration'),
                       ),
-                      (route) => false,
                     );
                   },
                   style: FilledButton.styleFrom(

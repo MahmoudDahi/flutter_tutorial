@@ -26,9 +26,15 @@ class HomePage extends StatelessWidget {
         padding: const EdgeInsets.symmetric(horizontal: 20.0),
         child: Column(
           children: [
+            SizedBox(
+              height: 20,
+            ),
             HeroWidget(
               title: 'Flutter App',
               nextPage: CoursePage(),
+            ),
+            SizedBox(
+              height: 10,
             ),
             ...List.generate(
               list.length,

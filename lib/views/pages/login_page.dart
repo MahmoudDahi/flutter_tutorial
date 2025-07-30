@@ -31,53 +31,57 @@ class _LoginPageState extends State<LoginPage> {
 
   @override
   Widget build(BuildContext context) {
+    double widthScreen = MediaQuery.of(context).size.width;
     return Scaffold(
       appBar: AppBar(),
       body: Center(
-        child: SingleChildScrollView(
-          child: Padding(
-            padding: const EdgeInsets.all(20.0),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.center,
-              children: [
-                HeroWidget(
-                  title: widget.title,
-                ),
-                SizedBox(height: 20),
-                TextField(
-                  controller: controllerEmail,
-                  decoration: InputDecoration(
-                    hintText: 'Email',
-                    border: OutlineInputBorder(
-                      borderRadius: BorderRadius.all(
-                        Radius.circular(15),
+        child: FractionallySizedBox(
+          widthFactor: widthScreen > 500 ? .5 : 1,
+          child: SingleChildScrollView(
+            child: Padding(
+              padding: const EdgeInsets.all(20.0),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  HeroWidget(
+                    title: widget.title,
+                  ),
+                  SizedBox(height: 20),
+                  TextField(
+                    controller: controllerEmail,
+                    decoration: InputDecoration(
+                      hintText: 'Email',
+                      border: OutlineInputBorder(
+                        borderRadius: BorderRadius.all(
+                          Radius.circular(15),
+                        ),
                       ),
                     ),
                   ),
-                ),
-                SizedBox(height: 10),
-                TextField(
-                  controller: controllerPassword,
-                  decoration: InputDecoration(
-                    hintText: 'Password',
-                    border: OutlineInputBorder(
-                      borderRadius: BorderRadius.all(
-                        Radius.circular(15),
+                  SizedBox(height: 10),
+                  TextField(
+                    controller: controllerPassword,
+                    decoration: InputDecoration(
+                      hintText: 'Password',
+                      border: OutlineInputBorder(
+                        borderRadius: BorderRadius.all(
+                          Radius.circular(15),
+                        ),
                       ),
                     ),
                   ),
-                ),
-                SizedBox(
-                  height: 20,
-                ),
-                ElevatedButton(
-                  onPressed: () => onLoginPressed(),
-                  style: FilledButton.styleFrom(
-                    minimumSize: Size(double.infinity, 40),
+                  SizedBox(
+                    height: 20,
                   ),
-                  child: Text(widget.title),
-                ),
-              ],
+                  ElevatedButton(
+                    onPressed: () => onLoginPressed(),
+                    style: FilledButton.styleFrom(
+                      minimumSize: Size(double.infinity, 40),
+                    ),
+                    child: Text(widget.title),
+                  ),
+                ],
+              ),
             ),
           ),
         ),
